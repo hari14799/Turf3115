@@ -1,0 +1,74 @@
+.slot{
+    
+    position: absolute;
+    left:400px;
+    top: 30px;
+}
+
+.slot button{
+
+  border-radius: 40px;
+  height: 60px;
+  width: 190px;
+  font-size:18px;
+}
+
+.slot input{
+
+  width:190px;
+  height: 40px;
+  font-size:18px;
+}
+
+
+.green{
+
+  background: linear-gradient(to right,#71e7b0,#04f738);
+     
+}
+
+.red{
+  background: linear-gradient(to right,#ff8c8c,#e43737,#ff1616);
+ 
+  cursor: not-allowed;
+  font-weight: bold;
+}
+
+.yellow{
+  background: linear-gradient(to right,#ffe08c,#e4bc37,#fffb16);
+  cursor: not-allowed;
+  font-weight: bold;
+}
+
+
+
+body{
+  background-color: #d3def8;
+  color: black;
+  background-image:url(img1.jpeg);
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+}
+
+
+.form1{
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  background-color:#fff;
+  height: 250px;
+  width: 200px;
+  padding: 15px;
+  border-radius: 15px;
+  
+}
+
+*{
+  padding: 0;
+  margin: 0%;
+}
+
+#hide{
+  display: none;
+}

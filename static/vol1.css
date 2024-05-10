@@ -1,0 +1,74 @@
+body{
+    background-color:#feece2 ;
+    color:black ;
+    background-image:url(vol1.jpeg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+
+
+.form1{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    background-color:#fff;
+    height: 250px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    
+}
+
+
+*{
+padding: 0;
+margin: 0%;
+}
+
+.green{
+background: linear-gradient(to right,#71e7b0,#04f738);
+color: black;
+}
+
+
+
+
+.slot{
+
+      position: absolute;
+      left:400px;
+      top: 30px;
+}
+
+.slot button{
+
+    border-radius: 40px;
+    height: 60px;
+    width: 190px;
+    font-size:18px;
+}
+
+.slot input{
+
+    width:190px;
+    height: 40px;
+    font-size:18px;
+}
+
+.yellow{
+    background: linear-gradient(to right,#ffe08c,#e4bc37,#fffb16);
+    cursor: not-allowed;
+ }
+
+
+.red{
+    background-color: red;
+    color: white;
+    
+}
+
+#hide{
+    display: none;
+}

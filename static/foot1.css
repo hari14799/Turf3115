@@ -1,0 +1,79 @@
+*{padding: 0; margin: 0;}
+       
+
+.slot{
+
+      position: absolute;
+      left:400px;
+      top: 30px;
+}
+
+
+.slot button{
+
+    border-radius: 40px;
+    height: 60px;
+    width: 190px;
+    font-size:18px;
+}
+
+.slot input{
+
+    width:190px;
+    height: 40px;
+    font-size:18px;
+}
+
+.green{
+
+    background: linear-gradient(to right,#71e7b0,#04f738);
+        color: black;
+}
+
+.red{
+    background: linear-gradient(to right,#ff8c8c,#e43737,#ff1616);
+    color:black;
+    cursor: not-allowed;
+    font-weight: bold;
+ }
+
+ .yellow{
+    background: linear-gradient(to right,#ffe08c,#e4bc37,#fffb16);
+    cursor: not-allowed;
+    font-weight: bold;
+ }
+
+#red select option{
+    display: none;
+}
+
+body{
+    background-color:#fff3c7;
+    color:white;
+    background-image:url(img5.jpeg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+
+
+.form1{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    background-color:#d8d8d8;
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+    height: 250px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    
+    
+}
+
+#hide  {
+    display: none;
+}

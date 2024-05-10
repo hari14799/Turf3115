@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overlay{
+
+            background-color: black;
+            width: 100%;
+            height:100%;
+            position: absolute;
+            top:0%;
+            left:0%;
+            opacity: 0.8;
+            z-index: 1;
+            display: none;
+        
+        }
+
+        .popupbox{
+
+            position: absolute;
+            z-index: 3;
+            background-color: white;
+            color: black;
+            width: 40%;
+            padding: 20px;
+            border-radius: 10px;
+            left: 30%;
+            display:none;
+        
+        }
+
+        .container{
+            position:relative;
+            top:85px;
+            left:5%;
+        }
+
+        td{
+            text-align: center;
+            font-size: 25px;
+        }
+
+        th{
+            font-size: 25px;
+        }
+
+        button{
+            position: relative;
+            top:50px;
+            left: 200px;
+            width: 20%;
+            height: 50%;
+            padding: 15px;
+        }
+        
+
+        *{
+            margin: 0;
+            padding: 0;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <button ><a href="{{url_for('cricket1')}}">CRICKET</a></button>  <button ><a href="{{url_for('football1')}}">FOOTBALL</a></button>  <button ><a href="{{url_for('volleyball1')}}">VOLLEYBALL</a></button><br><br> <button ><a href="{{url_for('basketball1')}}">BASKETBALL</a></button> <button ><a href="{{url_for('handball1')}}">HANDBALL</a></button> <button ><a href="{{url_for('kabaddi1')}}">KABADDI</a></button><br><br>
+   
+     
+    
+        </div>
+    </form>
+    
+    <div class="container">
+        <table border="1" cellspacing="5px" cellpadding="5px" width="80%" height="80%" >
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+               
+               
+                <th>CITY</th>
+                <th>MAIL ID</th>
+                <th>CONTACT NO</th>
+              
+    
+            </tr>
+            {% for data in datas %}
+                <tr>
+                    <td>{{data.uid}}</td>
+                    <td>{{data.uname}}</td>
+                    <td>{{data.uaddr}}</td>
+                    <td>{{data.mail}}</td>
+                    <td>{{data.contact}}</td>
+                   
+    
+    
+                </tr>
+    
+            {% endfor %}
+        </table></div>
+     
+   
+        
+  
+  
+  
+
+
+
+</body>
+</html>

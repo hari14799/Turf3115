@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .slot{
+    
+              position: absolute;
+              left:400px;
+              top: 30px;
+        }
+    
+        .slot button{
+    
+            border-radius: 40px;
+            height: 60px;
+            width: 190px;
+            font-size:18px;
+        }
+    
+        .slot input{
+    
+            width:190px;
+            height: 40px;
+            font-size:18px;
+        }
+    
+       
+    
+        
+    body{
+        background-color: #fcecf1;
+        color: #ff5889;
+    }
+
+    .form1_nav{
+        background-color: #ff5889;
+        height: 641px;
+        width: 300px;
+        position: absolute;
+        left: 0%;
+    }
+
+    .form1{
+        position: absolute;
+        top: 150px;
+        left: 30px;
+        background-color:#fff;
+        height: 250px;
+        width: 200px;
+        padding: 15px;
+        
+    }
+
+
+  *{
+    padding: 0;
+    margin: 0%;
+  }
+
+ 
+  .green{
+
+    background: linear-gradient(to right,#71e7b0,#04f738);
+        color: black;
+}
+
+.red{
+    background: linear-gradient(to right,#ff8c8c,#e43737,#ff1616);
+    color:black;
+    cursor: not-allowed;
+    font-weight: bold;
+ }
+
+ .yellow{
+    background: linear-gradient(to right,#ffe08c,#e4bc37,#fffb16);
+    cursor: not-allowed;
+    font-weight: bold;
+ }
+ #hide{
+  display: none;
+ }
+    
+    
+    
+    
+    
+     </style> 
+</head>
+<body>
+    <div class="form1_nav">
+    <div class="form1"> 
+    <form action="" method="POST">
+        <input type="text" name="bid" placeholder="bid" value="{{session["uid"]}}"><br><br>
+        <input type="date" name="bdate" placeholder="bdate"><br><br>
+        <select name="btime">
+            <option></option>
+          
+            <option id="{{values.FIVEAM}}" value="05:00 AM - 06:00 AM">05:00 AM - 06:00 AM</option>
+            <option id="{{values.SIXAM}}" value="06:00 AM - 07:00 AM">06:00 AM - 07:00 AM</option>
+            <option id="{{values.SEVENAM}}" value="07:00 AM - 08:00 AM">07:00 AM - 08:00 AM</option>
+            <option id="{{values.EIGHTAM}}" value="08:00 AM - 09:00 AM">08:00 AM - 09:00 AM</option>
+            <option id="{{values.NINEAM}}" value="09:00 AM - 10:00 AM">09:00 AM - 10:00 AM</option>
+            <option id="{{values.TENAM}}" value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+            <option id="{{values.ELEAM}}" value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+            <option id="{{values.TWEAM}}" value="12:00 PM - 01:00 PM">12:00 PM - 01:00 PM</option>
+            <option id="{{values.ONEPM}}" value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+            <option id="{{values.TWOPM}}" value="02:00 PM - 03:00 PM">02:00 PM - 03:00 PM</option>
+            <option id="{{values.THREEPM}}" value="03:00 PM - 04:00 PM">03:00 PM - 04:00 PM</option>
+            <option id="{{values.FOURPM}}" value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+            <option id="{{values.FIVEPM}}" value="05:00 PM - 06:00 PM">05:00 PM - 06:00 PM</option>
+            <option id="{{values.SIXPM}}" value="06:00 PM - 07:00 PM">06:00 PM - 07:00 PM</option>
+            <option id="{{values.SEVENPM}}" value="07:00 PM - 08:00 PM">07:00 PM - 08:00 PM</option>
+            <option id="{{values.EIGHTPM}}" value="08:00 PM - 09:00 PM">08:00 PM - 09:00 PM</option>
+            <option id="{{values.NINEPM}}" value="09:00 PM - 10:00 PM">09:00 AM - 10:00 PM</option>
+            <option id="{{values.TENPM}}" value="10:00 PM - 11:00 PM">10:00 PM - 11:00 PM</option>
+        </select><br><br>
+        <input type="radio"  name="sport" value="handball">HAND-BALL<br><br>
+        <input type="text"  name="amt" value="RS.1000"><br><br>
+        <button name="handball">PLACE ORDER</button>
+    </form>
+    </div>
+    </div>
+
+    <div class="slot">
+        <form action="" method="post">
+            <h3>Choose a DATE</h3>
+            <input type="date" id="demo" name="demo"> <input type="submit" name="choosedate"> <br><br>
+       
+            <h3>Choose Your Slot(MIN 1 hour slot booking)</h3>
+       
+       
+            <button class="{{datas.FIVEAM}}" id="btn1"><b>05:00 AM - 06:00 AM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.SIXAM}}"  id="btn2"><b>06:00 AM - 07:00 AM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.SEVENAM}}" id="btn3" ><b>07:00 AM - 08:00 AM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.EIGHTAM}}" id="btn4"><b>08:00 AM - 09:00 AM</b></button><br><br>
+        <button class="{{datas.NINEAM}}" id="btn5"><b>09:00 AM - 10:00 AM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.TENAM}}" id="btn6"><b>10:00 AM - 11:00 AM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.ELEAM}}" id="btn7"><b>11:00 AM - 12:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.TWEPM}}" id="btn8"><b>12:00 PM - 01:00 PM</b></button><br><br>
+        <button class="{{datas.ONEPM}}" id="btn9" ><b>01:00 AM - 02:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.TWOPM}}" id="btn10" ><b>02:00 PM - 03:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.THREEPM}}" id="btn11"><b>03:00 AM - 04:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.FOURPM}}" id="btn12"><b>04:00 AM - 05:00 PM</b></button><br><br>
+        <button class="{{datas.FIVEPM}}" id="btn13"><b>05:00 AM - 06:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.SIXPM}}" id="btn14"><b>06:00 AM - 07:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.SEVENPM}}" id="btn15"><b>07:00 AM - 08:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.EIGHTPM}}" id="btn16"><b>08:00 AM - 9:00 PM</b></button><br><br>
+        <button class="{{datas.NINEPM}}" id="btn17"><b>9:00 AM - 10:00 PM</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="{{datas.TENPM}}" id="btn18"><b>10:00 AM - 11:00 PM</b></button>
+         
+        </form>
+        </div>
+    
+        <script>
+    
+    
+        
+            document.getElementById('demo').value="{{seldate}}";
+      
+            function styleButtons() {
+                var buttons = document.querySelectorAll('.yellow');
+               
+                
+                buttons.forEach(function(button) {
+                  var buttonId = button.id;
+                  
+                  if (buttonId === 'btn1' || buttonId === 'btn2' || buttonId === 'btn3' || buttonId === 'btn4' || buttonId === 'btn5' || buttonId === 'btn6' || buttonId === 'btn7' || buttonId === 'btn8' || buttonId === 'btn9' || buttonId === 'btn10' || buttonId === 'btn11' || buttonId === 'btn12' || buttonId === 'btn13' || buttonId === 'btn14' || buttonId === 'btn15' || buttonId === 'btn16' || buttonId === 'btn17' || buttonId === 'btn18' ) {
+                    // Change background color to yellow
+                    button.style.backgroundColor = 'yellow';
+                    
+                    // Change text content to "Not Available"
+                    button.textContent = 'Not Available';
+            
+                    // You can add additional logic or actions here if needed
+                  }
+    
+                            
+                });
+              }
+            
+    
+              function styleButtons1() {
+               
+                var buttons = document.querySelectorAll('.red');
+                
+                buttons.forEach(function(button) {
+                  var buttonId = button.id;
+                  
+                  if (buttonId === 'btn1' || buttonId === 'btn2' || buttonId === 'btn3' || buttonId === 'btn4' || buttonId === 'btn5' || buttonId === 'btn6' || buttonId === 'btn7' || buttonId === 'btn8' || buttonId === 'btn9' || buttonId === 'btn10' || buttonId === 'btn11' || buttonId === 'btn12' || buttonId === 'btn13' || buttonId === 'btn14' || buttonId === 'btn15' || buttonId === 'btn16' || buttonId === 'btn17' || buttonId === 'btn18' ) {
+                    // Change background color to yellow
+                    
+                    
+                    // Change text content to "Not Available"
+                    button.textContent = 'BOOKED';
+            
+                    // You can add additional logic or actions here if needed
+                  }
+    
+                           
+                });
+              }
+              // Call the function on page load
+              window.onload = function() {
+                styleButtons();
+                styleButtons1();
+              };
+            
+           
+           
+           
+    
+        </script>    
+    
+</body>
+</html>

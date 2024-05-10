@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>simple landing page</title>
+    <link rel="stylesheet" href="/static/style.css">
+<body>
+   
+<header>
+    <div class="overlay"></div>
+    <div class="popupbox">
+        <form action="{{url_for('admin')}}" method="POST">
+            <input type="text" name="adminname" placeholder="ADMIN NAME"><br><br>
+            <input type="password" name="adminpwd" placeholder="PASSWORD"><br><br>
+            <button  type="submit" name="adminlogin">LOGIN</button>
+            <button id="cls"  onclick="closepopup()">CLOSE</button>
+            
+        </form>
+
+        
+     </div>   
+    <nav>
+        <div class="logo"> 
+        Sportz-Club
+    </div>
+    <div class="menu">
+        <a href="#">HOME</a>
+       
+       
+        <button onclick="show()">ADMIN</button> 
+		<a href="{{url_for('ulogin')}}">LOGIN</a>
+	    <a href="{{url_for('contact')}}">CONTACT</a>
+    </div>
+    <div class="register">
+        <a href="{{url_for('uregister')}}">REGISTER</a>
+    </div>
+    </nav>
+   </header> 
+    <section class="h-txt">
+        <span>Experience The TURF Universe With</span>
+        <h1> SPORTZ CLUB TURF </h1>
+        <br>
+        
+    </section>
+
+    <script>
+
+        var overlay =document.querySelector(".overlay")
+        var popupbox=document.querySelector(".popupbox")
+        var cls_btn=document.getElementById("cls")
+    
+        function show()
+        {
+            overlay.style.display="block"
+            popupbox.style.display="block"
+        }
+    
+        
+       function closepopup()
+       {
+           overlay.style.display="none"
+           popupbox.style.display="none"
+           event.preventDefault()
+    
+       }
+     
+       </script> 
+    
+    
+    
+</body>
+</html>

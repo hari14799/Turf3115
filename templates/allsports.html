@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        button{
+            position: relative;
+            top:50px;
+            left: 500px;
+            width: 20%;
+            height: 50%;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button><a href="{{url_for('cricket', umail=session ["umail"])}}">CRICKET</a></button><br><br>
+    <button><a href="{{url_for('football', umail=session ["umail"])}}">FOOTBALL</a></button><br><br>
+    <button><a href="{{url_for('volleyball', umail=session ["umail"])}}">VOLLEY BALL</a></button><br><br>
+    <button><a href="{{url_for('basketball',umail= session ["umail"])}}">BASKET BALL</a></button><br><br>
+    <button><a href="{{url_for('handball',umail= session ["umail"])}}">HAND BALL</a></button><br><br>
+    <button><a href="{{url_for('kabaddi',umail= session ["umail"])}}">KABADDI</a></button><br><br>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+.slot{
+
+    position: absolute;
+    left:400px;
+    top: 30px;
+}
+
+.slot button{
+
+  border-radius: 40px;
+  height: 60px;
+  width: 190px;
+  font-size:18px;
+}
+
+.slot input{
+
+  width:190px;
+  height: 40px;
+  font-size:18px;
+}
+
+
+.green{
+
+  background: linear-gradient(to right,#71e7b0,#04f738);
+      color: black;
+}
+
+.red{
+  background: linear-gradient(to right,#ff8c8c,#e43737,#ff1616);
+  color:black;
+  cursor: not-allowed;
+}
+
+.yellow{
+  background: linear-gradient(to right,#ffe08c,#e4bc37,#fffb16);
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+body{
+  background-color: #f1e8e6;
+  color: black;
+  background-image:url(bask1.jpeg);
+  background-repeat: no-repeat;
+  background-position:top;
+  background-size: cover;
+}
+
+
+
+.form1{
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  background-color:#fff;
+  height: 250px;
+  width: 200px;
+  padding: 15px;
+  border-radius: 15px;
+  
+}
+
+*{
+  padding: 0;
+  margin: 0%;
+}
+
+#hide{
+display:none;
+}

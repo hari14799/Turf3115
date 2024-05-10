@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           
+        }
+        
+        .nav{
+
+            background-color: #780cd1;
+            padding: 10px;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            color: #fff;
+        
+        }
+
+        .nav ul li{
+
+            display: inline-block;
+            padding-left: 30px;
+            position: relative;
+            left: 300px;
+            font-size: 35px;
+            top:20px;
+        }
+        .nav button{
+
+            border: none;
+            background-color: #780cd1;
+            font-size: 35px;
+        }
+        .nav li a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container{
+            position:relative;
+            top:85px;
+            left:5%;
+        }
+
+        #name {
+
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="nav">
+
+        <h1>USER DETAILS</h1>
+        <ul>
+          <li id="name">WELCOME:{{session["uname"]}}</li>
+          <li><a href="{{url_for('sports')}}">SLOTBOOKING</a></li>
+          <li><a href="{{url_for('logout')}}">LOGOUT</a></li>  
+       </ul>
+    </div>
+    <div class="container">
+        <table border="1" cellspacing="5px" cellpadding="5px" width="80%" height="80%">
+            <tr>
+                <th>ID</th>
+                <th>DATE</th>
+                <th>SLOT</th>
+                <th>SPORT</th>
+                <th>AMOUNT</th>
+              
+    
+            </tr>
+            {% for data in datas %}
+                <tr>
+                    <td>{{data.bid}}</td>
+                    <td>{{data.bdate}}</td>
+                    <td>{{data.btime}}</td>
+                    <td>{{data.sport}}</td>
+                    <td>{{data.amount}}</td>
+                 
+                   
+                 
+                </tr>
+            {% endfor %}
+           
+        </table></div>
+    
+ <script>
+        var date=d.getDate();
+        if(date<10){
+            date='0'+date
+        }
+        var month=d.getMonth()+1;
+        if(month<10){
+            month='0'+month
+        }
+        var year=d.getFullYear();
+        var cdate=year+"-"+month+"-"+date;
+    </script>
+</body>
+</html>
