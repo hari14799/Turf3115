@@ -5,7 +5,7 @@ from flask_mail import Mail,Message
 
 app=Flask(__name__)
 
-app.config["MYSQL_HOST"]="localhost"
+app.config["MYSQL_HOST"]="localhost" 
 app.config["MYSQL_USER"]="root"
 app.config["MYSQL_PASSWORD"]="sakthi"
 app.config["MYSQL_DB"]="admin"
